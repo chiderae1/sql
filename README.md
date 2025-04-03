@@ -76,3 +76,6 @@ The repository includes various SQL queries for analyzing university rankings:
 - Modify the queries to explore different aspects of university rankings.
 - Use the provided scripts to gain insights into global education trends.
 - Perform advanced analytics using joins, filters, and aggregations.
+
+ 📜 License
+This project is open-source. You are free to modify and use the content as needed.
