@@ -5,12 +5,12 @@ This project analyzes global university rankings using structured SQL queries. T
 
 ## Dataset Description
 The dataset contains information related to universities and their rankings, including:
-- **University Name: The official name of the university.
-- **Country: The country where the university is located.
-- **Ranking: The global ranking of the university.
-- **International Students: Percentage of international students.
-- **Academic Reputation: Score representing the university's academic prestige.
-- **Employer Reputation: Score based on employer feedback.
+- University Name: The official name of the university.
+- Country: The country where the university is located.
+- Ranking: The global ranking of the university.
+- International Students: Percentage of international students.
+- Academic Reputation: Score representing the university's academic prestige.
+- Employer Reputation: Score based on employer feedback.
 
 ## SQL Scripts
 The repository includes various SQL queries for analyzing university rankings:
@@ -27,7 +27,7 @@ The repository includes various SQL queries for analyzing university rankings:
    
    - This query ranks countries based on the number of universities represented in the dataset.
 
-2. **Top 10 Countries with Most Universities Ranked**
+2. Top 10 Countries with Most Universities Ranked**
    sql
    SELECT TOP 10 Country, COUNT(Country) AS Represented
    FROM latest_ranking
@@ -35,7 +35,7 @@ The repository includes various SQL queries for analyzing university rankings:
    ORDER BY Represented DESC;
    - This query identifies the top 10 countries with the highest number of ranked universities.
 
-3. **Average International Student Percentage by Country**
+3. Average International Student Percentage by Country
    sql
    SELECT Country,
           CONCAT(ROUND(AVG(CAST(REPLACE(international_Students, '%', '') AS FLOAT)), 2), '%') AS Avg_Percent
@@ -44,7 +44,7 @@ The repository includes various SQL queries for analyzing university rankings:
    ORDER BY AVG(CAST(REPLACE(international_Students, '%', '') AS FLOAT)) DESC; 
    - This query calculates the average percentage of international students per country.
 
-4. **Top 30% Universities by Country Ranking**
+4. Top 30% Universities by Country Ranking**
    sql
    WITH table1 AS (
        SELECT *, 
